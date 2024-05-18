@@ -14,6 +14,7 @@ async def start(message):
 
 @bot.message_handler(content_types='text')
 async def reply(message):
+    print(f"{message.from_user.username}: {message.text}")
     for key, value in rzhunemogu_DICT.items(): 
         if message.text == key: await bot.reply_to(message, tb.formatting.hitalic(rzhunemogu(value)), parse_mode='HTML', reply_markup=fun_markup)
         else: continue
