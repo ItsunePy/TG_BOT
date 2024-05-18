@@ -1,10 +1,11 @@
 import requests as r
 import telebot as tb
+from telebot.async_telebot import AsyncTeleBot
 from btn import *
 from random import randint
 from config import BOT_API_TOKEN
 
-bot = tb.TeleBot(BOT_API_TOKEN)
+bot = AsyncTeleBot(BOT_API_TOKEN)
 
 def rzhunemogu(rate):
     url = f'http://rzhunemogu.ru/RandJSON.aspx?CType={rate}'
